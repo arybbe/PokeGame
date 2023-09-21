@@ -51,12 +51,21 @@ namespace PokemonCommon.Pokemons
         public Pokemon(string name, params PokeTypes[] types)
         {
             _name = name;
-            _types = types;
+            _types = types.ToList();
         }
 
         // Detta är en instans-metod. Till skillnad från statiska metoder anropas dessa enbart genom objekt.
-        public static void LearnAttack(Attack attack, int attackIndex)
+        public void LearnAttack(Attack attack, int attackIndex)
         {
+            if (attackIndex > 3)
+            {
+                return;
+            }
+
+            if (attack == null)
+            {
+                return;
+            }
             Attacks[attackIndex] = attack;
         }
         
