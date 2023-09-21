@@ -1,30 +1,26 @@
 ﻿using PokemonCommon.Characters;
+using PokemonCommon.Enums;
 using PokemonCommon.Pokemons;
+using PokemonCommon.Pokemons.Attacks.FlyingAttacks;
+using PokemonCommon.Pokemons.Attacks.NormalAttacks;
 
-Trainer niklas = new Trainer();
+Trainer ash = new Trainer("Ash");
 
-Console.WriteLine("___________________________________");
+Pokemon pigeon = new Pokemon("Pigeon", PokeTypes.Flying);
+Pokemon charmander = new Pokemon("Charmander", PokeTypes.Fire);
 
-Pokemon charmeleon = new Pokemon();
+Tackle tackle = new Tackle();
+AirSlash airSlash = new AirSlash();
 
-charmeleon.Name = "Charmeleon";
+charmander.LearnAttack(tackle, 0);
+pigeon.LearnAttack(airSlash, 0);
 
-niklas.Catch(charmeleon);
-
-Pokemon wartorlte = new Pokemon();
-
-wartorlte.Name = "Wartortle";
-
-niklas.Catch(wartorlte);
-
-foreach (Pokemon pokemon in niklas.PokemonCollection)
+foreach (var pigeonAttack in pigeon.Attacks)
 {
-    pokemon.Attack(wartorlte);
+    if (pigeonAttack == null)
+    {
+        continue;
+    }
 
-
-    Console.WriteLine(pokemon.Name);
-    Console.WriteLine(pokemon.Type);
+    Console.WriteLine(pigeonAttack.Name);
 }
-
-
-//Hej på dig

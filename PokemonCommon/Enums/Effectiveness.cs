@@ -3,7 +3,7 @@
 public enum Effectiveness
 {
     None,
-    NotVery = 50,
+    Decreased = 50,
     Normal = 100,
-    Super = 200
+    Effective = 200
 }
