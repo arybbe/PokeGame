@@ -1,26 +1,25 @@
-﻿using PokemonCommon.Characters;
+﻿using PokeGame;
+using PokemonCommon.Characters;
 using PokemonCommon.Enums;
 using PokemonCommon.Pokemons;
-using PokemonCommon.Pokemons.Attacks.FlyingAttacks;
-using PokemonCommon.Pokemons.Attacks.NormalAttacks;
+using PokemonCommon.Pokemons.Attacks;
+
 
 Trainer ash = new Trainer("Ash");
 
-Pokemon pigeon = new Pokemon("Pigeon", PokeTypes.Flying);
+Pokemon sobble = new Pokemon("Sobble", PokeTypes.Water);
 Pokemon charmander = new Pokemon("Charmander", PokeTypes.Fire);
 
-Tackle tackle = new Tackle();
-AirSlash airSlash = new AirSlash();
+Ember ember = new Ember();
+charmander.LearnAttack(ember, 0);
 
-charmander.LearnAttack(tackle, 0);
-pigeon.LearnAttack(airSlash, 0);
+WaterGun waterGun = new WaterGun();
+sobble.LearnAttack(waterGun, 0);
 
-foreach (var pigeonAttack in pigeon.Attacks)
-{
-    if (pigeonAttack == null)
-    {
-        continue;
-    }
+Console.WriteLine("--------------------------");
 
-    Console.WriteLine(pigeonAttack.Name);
-}
+Console.WriteLine(sobble.HealthPoints);
+
+BattleEngine.MakeAttack(sobble, ember);
+
+Console.WriteLine(sobble.HealthPoints);
