@@ -54,19 +54,11 @@ namespace PokemonCommon.Pokemons
             _type = type;
         }
 
-        public void LearnAttack(Attack attack, int attackIndex)
+        // Detta är en instans-metod. Till skillnad från statiska metoder anropas dessa enbart genom objekt.
+        public virtual void Attack(Pokemon target)
         {
-            if (attackIndex > 3)
-            {
-                return;
-            }
 
-            if (attack == null)
-            {
-                return;
-            }
-
-            Attacks[attackIndex] = attack;
         }
+        
     }
 }
