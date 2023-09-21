@@ -55,10 +55,7 @@ namespace PokemonCommon.Pokemons
         }
 
         // Detta är en instans-metod. Till skillnad från statiska metoder anropas dessa enbart genom objekt.
-        public virtual void Attack(Pokemon target)
-        {
-
-        }
+        
         
     }
 }
