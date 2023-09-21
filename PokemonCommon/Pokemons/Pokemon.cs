@@ -5,8 +5,6 @@ namespace PokemonCommon.Pokemons
 {
     public class Pokemon
     {
-        #region Props
-
         // Property för health points 
         // Databehållaren "bakom" en property kallas för fält.
         private double _healthPoints = 100;
@@ -33,17 +31,14 @@ namespace PokemonCommon.Pokemons
         }
 
         // Property för Type
-        private List<PokeTypes> _types = new List<PokeTypes>();
-        public List<PokeTypes> Types
+        private List<PokeTypes> _types = new List<PokeTypes>()
+        public PokeTypes[] Types
         {
             get { return _types; }
             set { _types = value; }
         }
 
         public Attack[] Attacks { get; } = new Attack[4];
-
-
-        #endregion
 
         // Detta är en tom konstruktor, om ingen konstruktor deklareras så finns en sådan i alla klasser utan at tman behöver deklarera den.
         // En konstruktor är en metod som returnerar en ny instans av den typ den befinner sig i, returtyp och namn slås ihop.
@@ -53,10 +48,10 @@ namespace PokemonCommon.Pokemons
         }
 
         // Detta är ytterligare en konstruktor, denna gång med parametrar. En klass kan ha 0 ... n konstruktorer, bara alla har olika signatur.
-        public Pokemon(string name, PokeTypes[] types)
+        public Pokemon(string name, PokeTypes type)
         {
             _name = name;
-            _types = types.ToList();
+            _type = type;
         }
 
         // Detta är en instans-metod. Till skillnad från statiska metoder anropas dessa enbart genom objekt.
