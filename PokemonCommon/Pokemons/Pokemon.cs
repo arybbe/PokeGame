@@ -31,8 +31,8 @@ namespace PokemonCommon.Pokemons
         }
 
         // Property för Type
-        private List<PokeTypes> _types = new List<PokeTypes>()
-        public PokeTypes[] Types
+        private List<PokeTypes> _types = new List<PokeTypes>();
+        public List<PokeTypes> Types
         {
             get { return _types; }
             set { _types = value; }
@@ -48,14 +48,17 @@ namespace PokemonCommon.Pokemons
         }
 
         // Detta är ytterligare en konstruktor, denna gång med parametrar. En klass kan ha 0 ... n konstruktorer, bara alla har olika signatur.
-        public Pokemon(string name, PokeTypes type)
+        public Pokemon(string name, List<PokeTypes> types)
         {
             _name = name;
-            _type = type;
+            _types = types;
         }
 
         // Detta är en instans-metod. Till skillnad från statiska metoder anropas dessa enbart genom objekt.
-        
+        public static void LearnAttack(Attack attack, int attackIndex)
+        {
+            Attacks[attackIndex] = attack;
+        }
         
     }
 }

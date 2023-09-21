@@ -61,17 +61,17 @@ public static class BattleEngine
     private static Effectiveness FairyAttackEffectiveness(PokeTypes[] targetTypes)
     {
         if (targetTypes.Contains(PokeTypes.Fire))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Poison))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Steel))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Fighting))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Dragon))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Dark))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -79,19 +79,19 @@ public static class BattleEngine
     private static Effectiveness SteelAttackEffectiveness(PokeTypes[] targetTypes)
     {
         if (targetTypes.Contains(PokeTypes.Fire))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Water))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Electric))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Steel))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Ice))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Rock))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Fairy))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -99,15 +99,15 @@ public static class BattleEngine
     private static Effectiveness DarkAttackEffectiveness(PokeTypes[] targetTypes)
     {
         if (targetTypes.Contains(PokeTypes.Fighting))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Dragon))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Fairy))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Psychic))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Ghost))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -117,9 +117,9 @@ public static class BattleEngine
         if (targetTypes.Contains(PokeTypes.Fairy))
             return Effectiveness.None;
         if (targetTypes.Contains(PokeTypes.Steel))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Dragon))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -129,11 +129,11 @@ public static class BattleEngine
         if (targetTypes.Contains(PokeTypes.Normal))
             return Effectiveness.None;
         if (targetTypes.Contains(PokeTypes.Dark))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Psychic))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Ghost))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -141,19 +141,19 @@ public static class BattleEngine
     private static Effectiveness RockAttackEffectiveness(PokeTypes[] targetTypes)
     {
         if (targetTypes.Contains(PokeTypes.Fighting))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Ground))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Steel))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Fire))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Ice))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Flying))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Bug))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -161,25 +161,25 @@ public static class BattleEngine
     private static Effectiveness BugAttackEffectiveness(PokeTypes[] targetTypes)
     {
         if (targetTypes.Contains(PokeTypes.Fire))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Fighting))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Poison))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Flying))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Ghost))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Steel))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Fairy))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Grass))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Psychic))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Dark))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -189,13 +189,13 @@ public static class BattleEngine
         if (targetTypes.Contains(PokeTypes.Dark))
             return Effectiveness.None;
         if (targetTypes.Contains(PokeTypes.Psychic))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Steel))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Fighting))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Poison))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -203,17 +203,17 @@ public static class BattleEngine
     private static Effectiveness FlyingAttackEffectiveness(PokeTypes[] targetTypes)
     {
         if (targetTypes.Contains(PokeTypes.Electric))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Rock))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Steel))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Grass))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Fighting))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Bug))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -223,19 +223,19 @@ public static class BattleEngine
         if (targetTypes.Contains(PokeTypes.Flying))
             return Effectiveness.None;
         if (targetTypes.Contains(PokeTypes.Bug))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Grass))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Fire))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Electric))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Poison))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Rock))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Steel))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -245,17 +245,17 @@ public static class BattleEngine
         if (targetTypes.Contains(PokeTypes.Steel))
             return Effectiveness.None;
         if (targetTypes.Contains(PokeTypes.Poison))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Ground))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Rock))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Ghost))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Grass))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Fairy))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -265,25 +265,25 @@ public static class BattleEngine
         if (targetTypes.Contains(PokeTypes.Ghost))
             return Effectiveness.None;
         if (targetTypes.Contains(PokeTypes.Poison))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Flying))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Psychic))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Bug))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Fairy))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Normal))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Ice))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Rock))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Dark))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Steel))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -291,21 +291,21 @@ public static class BattleEngine
     private static Effectiveness IceAttackEffectiveness(PokeTypes[] targetTypes)
     {
         if (targetTypes.Contains(PokeTypes.Fire))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Water))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Ice))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Steel))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Grass))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Ground))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Flying))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Ghost))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -315,15 +315,15 @@ public static class BattleEngine
         if (targetTypes.Contains(PokeTypes.Ground))
             return Effectiveness.None;
         if (targetTypes.Contains(PokeTypes.Electric))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Grass))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Dragon))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Water))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Flying))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -331,25 +331,25 @@ public static class BattleEngine
     private static Effectiveness GrassAttackEffectiveness(PokeTypes[] targetTypes)
     {
         if (targetTypes.Contains(PokeTypes.Fire))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Grass))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Poison))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Flying))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Bug))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Dragon))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Steel))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Water))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Ground))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Rock))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -357,17 +357,17 @@ public static class BattleEngine
     private static Effectiveness WaterAttackEffectiveness(PokeTypes[] targetTypes)
     {
         if (targetTypes.Contains(PokeTypes.Water))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Grass))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Dragon))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Fire))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Ground))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Rock))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -375,21 +375,21 @@ public static class BattleEngine
     private static Effectiveness FireAttackEffectiveness(PokeTypes[] targetTypes)
     {
         if (targetTypes.Contains(PokeTypes.Fire))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Water))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Rock))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Dragon))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Grass))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Ice))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Bug))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
         if (targetTypes.Contains(PokeTypes.Steel))
-            return Effectiveness.Super;
+            return Effectiveness.Effective;
 
         return Effectiveness.Normal;
     }
@@ -399,9 +399,9 @@ public static class BattleEngine
         if (targetTypes.Contains(PokeTypes.Ghost))
             return Effectiveness.None;
         if (targetTypes.Contains(PokeTypes.Rock))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
         if (targetTypes.Contains(PokeTypes.Steel))
-            return Effectiveness.NotVery;
+            return Effectiveness.Decreased;
 
         return Effectiveness.Normal;
     }
