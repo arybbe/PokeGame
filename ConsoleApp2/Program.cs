@@ -2,23 +2,26 @@
 using PokemonCommon.Characters;
 using PokemonCommon.Enums;
 using PokemonCommon.Pokemons;
-using PokemonCommon.Pokemons.Attacks;
-
+using PokemonCommon.Pokemons.Attacks.ElectricAttacks;
+using PokemonCommon.Pokemons.Attacks.FireAttacks;
+using PokemonCommon.Pokemons.Attacks.WaterAttacks;
 
 Trainer ash = new Trainer("Ash");
 
-Pokemon sobble = new Pokemon("Sobble", PokeTypes.Water);
-Pokemon charmander = new Pokemon("Charmander", PokeTypes.Fire);
 
+Pokemon charmander = new Pokemon("Charmander", PokeTypes.Fire);
 Ember ember = new Ember();
 charmander.LearnAttack(ember, 0);
 
+Pokemon sobble = new Pokemon("Sobble", PokeTypes.Water);
 WaterGun waterGun = new WaterGun();
 sobble.LearnAttack(waterGun, 0);
 
-Console.WriteLine("--------------------------");
+Pokemon pikachu = new Pokemon("Pikachu", PokeTypes.Electric);
+Discharge discharge = new Discharge();
+pikachu.LearnAttack(discharge, 0);
 
-Console.WriteLine(sobble.HealthPoints);
 
-BattleEngine.MakeAttack(sobble, charmander.Attacks[0], charmander.Name);
-BattleEngine.MakeAttack(charmander, sobble.Attacks[0], sobble.Name);
+BattleEngine.PokeBattle(charmander, sobble);
+Console.WriteLine("-----------------");
+BattleEngine.PokeBattle(pikachu, sobble);

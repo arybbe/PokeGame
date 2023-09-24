@@ -1,6 +1,6 @@
 ﻿using PokemonCommon.Enums;
 
-namespace PokemonCommon.Pokemons.Attacks;
+namespace PokemonCommon.Pokemons.Attacks.FireAttacks;
 
 public class Ember : Attack
 {

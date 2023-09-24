@@ -7,20 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pokemons\Attacks\FireAttacks\" />
     <Folder Include="Pokemons\Attacks\IceAttacks\" />
     <Folder Include="Pokemons\Attacks\GroundAttacks\" />
     <Folder Include="Pokemons\Attacks\FlyingAttacks\" />
-    <Folder Include="Pokemons\Attacks\BugAttacks\" />
     <Folder Include="Pokemons\Attacks\GhostAttacks\" />
     <Folder Include="Pokemons\Attacks\DragonAttacks\" />
-    <Folder Include="Pokemons\Attacks\DarkAttacks\" />
     <Folder Include="Pokemons\Attacks\FairyAttacks\" />
     <Folder Include="Pokemons\Attacks\SteelAttacks\" />
     <Folder Include="Pokemons\Attacks\RockAttacks\" />
     <Folder Include="Pokemons\Attacks\PsychicAttacks\" />
     <Folder Include="Pokemons\Attacks\PoisonAttacks\" />
-    <Folder Include="Pokemons\Attacks\WaterAttacks\" />
   </ItemGroup>
 
 </Project>

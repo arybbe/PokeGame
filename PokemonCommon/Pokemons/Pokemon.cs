@@ -13,7 +13,14 @@ namespace PokemonCommon.Pokemons
             // Get är en metod som anropas när värdet på en property ska läsas
             get { return _healthPoints; }
             // Set är en metod som anropas när värdet på en property ska sättas
-            set { _healthPoints = value; }
+            set
+            {
+                _healthPoints = value;
+                if (_healthPoints < 0)
+                {
+                    _healthPoints = 0;
+                }
+            }
         }
 
         // Property för Name

@@ -18,6 +18,33 @@ public static class BattleEngine
         target.HealthPoints -= attack.Damage * modifier;
     }
 
+    public static void PokeBattle(Pokemon attackerPokemon, Pokemon defenderPokemon)
+    {
+        Console.WriteLine($"Battle between {attackerPokemon.Name} and {defenderPokemon.Name} starts! Press any key to start...");
+        Console.ReadKey();
+        while (true)
+        {
+            BattleEngine.MakeAttack(defenderPokemon, attackerPokemon.Attacks[0], attackerPokemon.Name);
+            Console.WriteLine($"{defenderPokemon.Name} has {defenderPokemon.HealthPoints} HP remaining!");
+            Console.WriteLine();
+            if (defenderPokemon.HealthPoints <= 0)
+            {
+                Console.WriteLine($"{defenderPokemon.Name} has fainted...");
+                break;
+            }
+
+            BattleEngine.MakeAttack(attackerPokemon, defenderPokemon.Attacks[0], defenderPokemon.Name);
+            Console.WriteLine($"{attackerPokemon.Name} has {attackerPokemon.HealthPoints} HP remaining!");
+            Console.WriteLine();
+            if (attackerPokemon.HealthPoints <= 0)
+            {
+                Console.WriteLine($"{attackerPokemon.Name} has fainted...");
+                break;
+            }
+        }
+
+    }
+
     public static Effectiveness CheckEffectiveness(PokeTypes attackType, PokeTypes[] targetTypes)
     {
         switch (attackType)

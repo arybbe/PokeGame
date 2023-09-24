@@ -1,6 +1,6 @@
 ﻿using PokemonCommon.Enums;
 
-namespace PokemonCommon.Pokemons.Attacks;
+namespace PokemonCommon.Pokemons.Attacks.BugAttacks;
 
 public class BugBite : Attack
 {
